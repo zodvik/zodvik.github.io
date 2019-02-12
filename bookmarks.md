@@ -16,12 +16,21 @@ This is written Peter Norvig. Highlight here is the conciseness with which the c
 ### Videos
 
 ### Books
-- Site Reliability Engineering
-- High Performance MySQL
-- Effective Java
+- [Site Reliability Workbook][sre-workbook]
+- [High Performance MySQL][high-perf-mysql]
+- [Effective Java][effective-java]
+
+<p>
+  ---
+  <br/>
+  <em>Outgoing links might be monetized.</em>
+</p>
 
 
 [alerting-philosophy]: https://docs.google.com/document/d/199PqyG3UsyXlwieHaqbGiWVa8eMWi8zzAn0YfcApr8Q/preview#heading=h.fs3knmjt7fjy
 [jeff-sanjay]: https://www.newyorker.com/magazine/2018/12/10/the-friendship-that-made-google-huge
 [pki]: https://smallstep.com/blog/everything-pki.html
 [spell-correct]: https://norvig.com/spell-correct.html
+[sre-workbook]: https://amzn.to/2BwHWam
+[high-perf-mysql]: https://amzn.to/2I6IVne
+[effective-java]: https://amzn.to/2Gn8Q8L
