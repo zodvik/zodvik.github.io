@@ -1,3 +1,33 @@
 ---
-title: Using a U2F key
+title: Using a U2F key on a Mac
 ---
+
+I had enabled 2FA on most online accounts few months back. This was after
+- my netflix account was hacked
+- my primary email showed by in [haveibeenpwned.com](//haveibeenpwned.com) and the current state shows 13 breaches
+
+The 2FA mechanism I used was either SMS or via Google Authenticator app. For services that supported both, I had enabled both for redundancy.
+
+Both of these came with their friction
+- SMS codes required access to phone & service to be available that becomes tricky when phone is switched off or while travelling internationally
+- Google Authenticator requires re-setup upon phone change or reset
+
+A more "seamless" alternative is using [U2F keys](https://www.yubico.com/solutions/fido-u2f/). It gets plugged like an USB key and whenever a 2FA is requested, you press the button on the key and the 2FA goes through. This becomes a "what you have" factor of authentication.
+
+
+### Setup
+I purchased a pair of cheapest available [U2F keys from Amazon](https://amzn.to/2GohVxY). By now, I've setup the following services on it
+- Online services - Facebook, Github, Google, Twitter
+- Mac - sudo prompt, login from screen lock
+
+Setting up for the online services was straightforward with Chrome. Their respective settings page had options to add a security key. The process was a bit involed for setting up for mac prompts. [This post by Sean Anderson](https://microamps.gibsjose.com/u2f-authentication-on-os-x/) goes into the steps to achieve it.
+
+At work, we run our own DC with 2FA enabled for login. But, ssh authentication via u2f keys isn't enabled yet :-(
+
+
+### Cons
+- The key I had purchased didn't support NFC or Bluetooth - so it doesn't work my phone.
+- The keys need to be on you when you need to use them. Also, it is recommended to have a pair of them, should you lose one.
+
+### Pros
+- It just works.
