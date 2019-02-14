@@ -21,4 +21,25 @@ You can reach me at [zodvik@gmail.com](mailto:zodvik@gmail.com)
 {% endfor %}
 </ul>
 
+## purchases
+
+<ul>
+{% for post in site.purchases %}
+  <li>
+  	<a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+{% endfor %}
+</ul>
+
+
+## drafts
+
+<ul>
+{% for post in site.drafts %}
+  <li>
+  	{{ post.title }}
+  </li>
+{% endfor %}
+</ul>
+
 [bookmark]: /bookmarks

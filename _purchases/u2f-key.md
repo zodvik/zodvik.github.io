@@ -1,5 +1,6 @@
 ---
-title: Using a U2F key on a Mac
+title: U2F key
+layout: default
 ---
 
 I had enabled 2FA on most online accounts few months back. This was after

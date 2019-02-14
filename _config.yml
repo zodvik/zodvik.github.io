@@ -6,3 +6,11 @@ twitter_username: zodvik
 github_username:  zodvik
 markdown: redcarpet
 permalink: /posts/:title
+
+collections:
+  purchases:
+    output: true
+    permalink: /:collection/:title
+  drafts:
+    output: false
+
