@@ -10,7 +10,14 @@
   <body>
     <script src="https://js.stripe.com/v3"></script>
 
-    <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+    <button
+      style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+      id="checkout-button-sku_GThCjR2zY9HfAn"
+      role="link"
+    >
+      Pay &#8377;2
+    </button>
+
     <button
       style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
       id="checkout-button-sku_GTgx6zHRwoez1X"
@@ -25,14 +32,39 @@
     (function() {
       var stripe = Stripe('pk_live_zSxr9xsgYXjNX2GMbWjQ8tgP00I9TXz9oY');
     
-      var checkoutButton = document.getElementById('checkout-button-sku_GTgx6zHRwoez1X');
-      checkoutButton.addEventListener('click', function () {
+      var uberButton = document.getElementById('checkout-button-sku_GTgx6zHRwoez1X');
+      uberButton.addEventListener('click', function () {
         // When the customer clicks on the button, redirect
         // them to Checkout.
         stripe.redirectToCheckout({
           items: [{sku: 'sku_GTgx6zHRwoez1X', quantity: 1}],
-          successUrl: 'https://zodvik.com/',
-          cancelUrl: 'https://zodvik.com/',
+          successUrl: 'https://zodvik.com/shop.html',
+          cancelUrl: 'https://zodvik.com/shop.html',
+        })
+        .then(function (result) {
+          if (result.error) {
+            // If `redirectToCheckout` fails due to a browser or network
+            // error, display the localized error message to your customer.
+            var displayError = document.getElementById('error-message');
+            displayError.textContent = result.error.message;
+          }
+        });
+      });
+
+      var demoButton = document.getElementById('checkout-button-sku_GThCjR2zY9HfAn');
+      demoButton.addEventListener('click', function () {
+        // When the customer clicks on the button, redirect
+        // them to Checkout.
+        stripe.redirectToCheckout({
+          items: [{sku: 'sku_GThCjR2zY9HfAn', quantity: 1}],
+
+          // Do not rely on the redirect to the successUrl for fulfilling
+          // purchases, customers may not always reach the success_url after
+          // a successful payment.
+          // Instead use one of the strategies described in
+          // https://stripe.com/docs/payments/checkout/fulfillment
+          successUrl: 'https://zodvik.com/shop.html',
+          cancelUrl: 'https://zodvik.com/shop.html',
         })
         .then(function (result) {
           if (result.error) {
