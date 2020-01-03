@@ -1,3 +1,3 @@
 # zodvik.github.io
 
-Site at [https://zodvik.com/]
+Site at https://zodvik.com/
