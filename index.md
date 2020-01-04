@@ -11,10 +11,8 @@ You can reach me at [zodvik@gmail.com](mailto:zodvik@gmail.com)
 
 ## posts
 
-<ul>
 {% for post in site.posts %}
-  <li>
+  <div>
   	<a href="{{ post.url }}">{{ post.title }}</a>
-  </li>
+  </div>
 {% endfor %}
-</ul>
