@@ -1,5 +1,6 @@
 ---
 title: Setting up a new Macbook
+layout: default
 date: 2018-02-12
 ---
 
