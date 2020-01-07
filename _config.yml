@@ -4,7 +4,6 @@ baseurl: ""
 url: "https://zodvik.com"
 twitter_username: zodvik
 github_username:  zodvik
-markdown: redcarpet
 permalink: /posts/:title
 
 collections:
