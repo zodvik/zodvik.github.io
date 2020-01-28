@@ -1,0 +1,18 @@
+<form action="https://www.example.com/payment/success/" method="POST">
+<script
+    src="https://checkout.razorpay.com/v1/checkout.js"
+    data-key="rzp_live_ZgarYbaPQSFVd6" // Enter the Key ID generated from the Dashboard
+    data-amount="100" // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise or INR 500.
+    data-currency="USD"
+    data-order_id="order_E9pJUxfo92Dhi9"//This is a sample Order ID. Create an Order using Orders API. (https://razorpay.com/docs/payment-gateway/orders/integration/#step-1-create-an-order)
+    data-buttontext="Pay with Razorpay"
+    data-name="Acme Corp"
+    data-description="A Wild Sheep Chase is the third novel by Japanese author Haruki Murakami"
+    data-image="https://example.com/your_logo.jpg"
+    data-prefill.name="Gaurav Kumar"
+    data-prefill.email="nikhil.bafna.r@gmail.com"
+    data-prefill.contact="8095234263"
+    data-theme.color="#F37254"
+></script>
+<input type="hidden" custom="Hidden Element" name="hidden">
+</form>
