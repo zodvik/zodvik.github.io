@@ -1,0 +1,26 @@
+#!/usr/bin/env python
+
+from datetime import date
+import sys
+
+TEMPLATE = """---
+title: %s
+layout: post
+date: %s
+---
+"""
+
+if __name__ == "__main__":
+    collection = sys.argv[1]
+    title = sys.argv[2]
+
+    post_date = date.today().strftime("%Y-%m-%d")
+
+    content = TEMPLATE % (title, post_date)
+    file_name = "%s-%s.md" % (post_date, "-".join(title.split()))
+    file_path = "_%s/%s" % (collection, file_name)
+
+    with open(file_path, "w") as f:
+        f.write(content)
+
+    print("generated %s" % (file_path))

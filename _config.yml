@@ -12,4 +12,7 @@ collections:
     permalink: /:collection/:title
   drafts:
     output: false
+  til:
+    output: true
+    permalink: /:collection/:title
 
