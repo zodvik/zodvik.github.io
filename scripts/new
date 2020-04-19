@@ -17,7 +17,7 @@ if __name__ == "__main__":
     post_date = date.today().strftime("%Y-%m-%d")
 
     content = TEMPLATE % (title, post_date)
-    file_name = "%s-%s.md" % (post_date, "-".join(title.split()))
+    file_name = "%s-%s.md" % (post_date, "-".join(title.split()).lower())
     file_path = "_%s/%s" % (collection, file_name)
 
     with open(file_path, "w") as f:
