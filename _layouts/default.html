@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ page.title }}</title>
     <style type="text/css">
-    	body {
+    		body {
 			font-family: system-ui, sans-serif;
+			font-size: large;
 			margin: 0 auto;
 			padding: 0 1em;
 			max-width: 40em;
 			line-height: 1.4;
-			color: #222;
+			color: #333;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			margin: 1.25em 0 0.5em 0;
+			line-height: 1.2;
+		}
+		h1 {
+			margin-bottom: 0.25em;
+		}
+		h1 + div, h2 + div {
+			margin: 0.5em 0;
 		}
 		pre {
 			white-space: pre-wrap;
@@ -23,7 +34,7 @@
 			font-size: 85%;
 		}
 		a {
-			color:#0086e6;
+			color: #00e;
 			text-decoration: none;
 		}
 		hr {
